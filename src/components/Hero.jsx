@@ -52,7 +52,7 @@ const Hero = () => {
         className=" px-4 col-span-1  flex flex-col justify-evenly  text-white"
         style={{ backgroundColor: "hsl(240, 100%, 5%)" }}
       >
-        <p className="text-3xl" style={{ color: "hsl(35, 77%, 62%)" }}>
+        <p className="text-3xl pt-2" style={{ color: "hsl(35, 77%, 62%)" }}>
           NEW
         </p>
         <p className="border-b border-gray-400 py-6 md:text-xl">
