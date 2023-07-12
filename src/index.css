@@ -16,7 +16,8 @@
         @apply cursor-pointer
     }
     p{
-       @apply text-lg
+       @apply text-sm
     }
+    
 
 }

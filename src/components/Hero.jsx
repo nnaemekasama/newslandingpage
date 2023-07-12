@@ -42,6 +42,12 @@ const Hero = () => {
             <button
               style={{ backgroundColor: "hsl(5, 85%, 63%)" }}
               className="text-white border-2 px-6 py-3 my-2 w-[60%]  tracking-widest "
+              onMouseEnter={(e) =>
+                (e.target.style.background = "hsl(240, 100%, 5%)")
+              }
+              onMouseLeave={(e) =>
+                (e.target.style.background = "hsl(5, 85%, 63%)")
+              }
             >
               READ MORE
             </button>
@@ -55,26 +61,58 @@ const Hero = () => {
         <p className="text-3xl pt-2" style={{ color: "hsl(35, 77%, 62%)" }}>
           NEW
         </p>
-        <p className="border-b border-gray-400 py-6 md:text-xl">
-          Hydrogen VS Electric Cars Will hydrogen-fueled cars ever catch up to
-          EVs?
-        </p>
-        <p className="border-b border-gray-400 py-6 md:text-xl">
-          The Downsides of AI Artistry What are the possible adverse effects of
-          on-demand AI image generation?
-        </p>
-        <p className="py-6 md:text-xl">
-          Is VC Funding Drying Up? Private funding by VC firms is down 50% YOY.
-          We take a look at what that means.
-        </p>
+        <div className="border-b border-gray-400 py-6 ">
+          <p
+            className="font-bold text-xl cursor-pointer"
+            onMouseEnter={(e) => (e.target.style.color = "hsl(35, 77%, 62%)")}
+            onMouseLeave={(e) => (e.target.style.color = "white")}
+          >
+            Hydrogen VS Electric Cars{" "}
+          </p>
+          <p className="">Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </div>
+        <div className="border-b border-gray-400 py-6 md:text-xl">
+          <p
+            className="font-bold text-xl cursor-pointer"
+            onMouseEnter={(e) => (e.target.style.color = "hsl(35, 77%, 62%)")}
+            onMouseLeave={(e) => (e.target.style.color = "white")}
+          >
+            The Downsides of AI Artistry{" "}
+          </p>
+          <p className="">
+            What are the possible adverse effects of on-demand AI image
+            generation?
+          </p>
+        </div>
+        <div className=" py-6 md:text-xl">
+          <p
+            className="font-bold text-xl cursor-pointer"
+            onMouseEnter={(e) => (e.target.style.color = "hsl(35, 77%, 62%)")}
+            onMouseLeave={(e) => (e.target.style.color = "white")}
+          >
+            Is VC Funding Drying Up?
+          </p>
+          <p className="">
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.
+          </p>
+        </div>
       </div>
 
       {data.map((p) => (
         <div className="flex gap-4 py-2  flex-shrink">
           <img src={p.image} style={{ width: "75px", height: "100px" }} />
           <div>
-            <p className="text-2xl text-pink-500">{p.id}</p>
-            <p className="font-bold">{p.header}</p>
+            <p className="text-2xl" style={{ color: "hsl(233, 8%, 79%)" }}>
+              {p.id}
+            </p>
+            <p
+              className="font-bold cursor-pointer"
+              onMouseEnter={(e) => (e.target.style.color = "hsl(5, 85%, 63%)")}
+              onMouseLeave={(e) => (e.target.style.color = "black")}
+            >
+              {p.header}
+            </p>
             <p>{p.text}</p>
           </div>
         </div>
